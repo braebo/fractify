@@ -1,0 +1,40 @@
+{	
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	
+	"editor.formatOnSave": false,
+	
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+
+	"files.associations": {
+		"*.xml": "html",
+		"*.svg": "html",
+	},
+	
+	"beautify.language": {
+		"json": {
+			"ext": ["json"],
+			"type": ["json"],
+			"filename": [".jshintrc", ".jsbeautifyrc"]
+		}
+	},
+	
+	"workbench.iconTheme": "material-icon-theme",
+	
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"punctuation.definition.tag",
+					"entity.name.tag.svelte",
+					"punctuation.separator.key-value.svelte",
+					"constant.name.attribute.tag.pug"
+				],
+				"settings": {
+					"foreground": "#5a86ff56"
+				}
+			},
+		]
+	}
+}

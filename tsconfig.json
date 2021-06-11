@@ -1,0 +1,46 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"module": "esnext",
+		"target": "es2019",
+		"lib": ["esnext", "dom"],
+		"importsNotUsedAsValues": "error",
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"allowJs": true,
+		"checkJs": true,
+		"types": ["node"],
+		"paths": {
+			"$components/*": ["src/components/*"],
+			"$actions/*": ["src/actions/*"],
+			"$utils/*": ["src/utils/*"],
+			"$data/*": ["src/data/*"],
+			"$lib/*": ["src/lib/*"],
+			"$/*": ["src/*"]
+		}
+	},
+	"include": [
+		"src/**/**/**/*.ts",
+		"src/**/*.svelte",
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/*.d.ts",
+	],
+	"exclude": [
+		".vercel_build_output/*",
+		"mdsvex.config.js",
+		"node_modules/*",
+		".svelte-kit/*",
+		"functions/*",
+		"coverage/*",
+		".svelte/*",
+		"build/*",
+		"dist/*"
+	]
+}

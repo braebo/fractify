@@ -1,0 +1,91 @@
+{
+  "name": "fractify",
+  "version": "0.1.0",
+  "keywords": [
+    "svelte",
+    "routify",
+    "vite",
+    "rollup",
+    "i18n"
+  ],
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:routify": "routify",
+    "serve": "run-p serve:*",
+    "serve:spa": "spassr",
+    "serve:ssr": "spassr --ssr --port 5005",
+    "build": "cross-env NODE_ENV=production run-s build:*",
+    "build:routify": "routify -b",
+    "test": "npm run test:dev && npm run test:build",
+    "test:dev": "node test/lib/wrapper dev ava test/{common,dev}/**/*.test.js",
+    "test:build": "node test/lib/wrapper build ava test/{common,build}/**/*.test.js",
+    "dev:vite": "vite",
+    "build:vite": "vite build",
+    "serve:vite": "vite preview",
+    "build:static": "spank"
+  },
+  "ava": {
+    "verbose": true
+  },
+  "devDependencies": {
+    "@roxi/routify": "^2.14.0",
+    "@sveltejs/adapter-vercel": "next",
+    "@sveltejs/kit": "next",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.10",
+    "@types/cookie": "^0.4.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.2",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "fkill": "^7.1.0",
+    "mdsvex": "^0.9.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.15",
+    "postcss-load-config": "^3.0.1",
+    "prettier": "^2.3.0",
+    "prettier-plugin-svelte": "^2.3.0",
+    "pug": "^3.0.2",
+    "rehype-autolink-headings": "^5.0.1",
+    "rehype-slug": "^4.0.1",
+    "remark-abbr": "^1.4.1",
+    "remark-github": "^10.1.0",
+    "remark-slug": "^6.0.0",
+    "routify-plugin-frontmatter": "^1.0.1",
+    "spank": "^1.5.0",
+    "spassr": "^2.4.1-0",
+    "svelte": "^3.38.2",
+    "svelte-hmr": "^0.14.4",
+    "svelte-preprocess": "4.7.3",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.3.3",
+    "vite-main-js": "^0.0.1"
+  },
+  "appConfig": {
+    "port": 5000,
+    "assetsDir": "static",
+    "template": "dist/index.html",
+    "distDir": "dist",
+    "buildDir": "dist/assets",
+    "script": "dist/main.js"
+  },
+  "routify": {
+    "sourceDir": "static",
+    "extensions": [
+      "md",
+      "svelte"
+    ],
+    "plugins": {
+      "routify-plugin-frontmatter": {}
+    }
+  },
+  "dependencies": {
+    "@fontsource/fira-mono": "^4.4.5",
+    "@lukeed/uuid": "^2.0.0",
+    "cookie": "^0.4.1"
+  }
+}
