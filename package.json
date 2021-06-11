@@ -1,5 +1,6 @@
 {
   "name": "fractify",
+  "description": "Routify Starter Template: fractify.vercel.app",
   "version": "0.1.0",
   "keywords": [
     "svelte",
