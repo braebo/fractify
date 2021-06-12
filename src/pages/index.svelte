@@ -1,4 +1,3 @@
-<h1>App?!</h1>
-<p>A short introduction would have been nice here...</p>
+<h1>Fractify Starter</h1>
 
 <a href="/guide">guide</a>
