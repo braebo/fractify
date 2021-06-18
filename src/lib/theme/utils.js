@@ -2,7 +2,7 @@ import { get } from 'svelte/store'
 import themes from './themes'
 import theme from './index'
 
-let verbose = false; 	// Change to true to enable console logs.
+let verbose = true; 	// Change to true to enable console logs.
 const log = verbose   	// Colorful console.log with optional theming, i.e.:  log(`x = ${x})`, 'purple', 20, 'blue')
 	? (str, color = 'lightblue', font_size = 15, border = 'gray',) => console.log(`%c${str}`, `size:${font_size}px;color:${color};border:1px solid ${border};padding:5px;`)
 	: (s, c, f, b) => { };

@@ -1,13 +1,17 @@
 <script>
-  import Navigation from './Navigation.svelte'
-  import { url } from '@roxi/routify'
-  export let children
+	import { url } from '@roxi/routify'
+	import Nav from './Nav.svelte'
 
+	export let children;
 </script>
 
-<nav>
-  <a href={$url('/')}>
-    <h3>My App</h3>
-  </a>
-  <Navigation {children} />
-</nav>
+
+<template lang="pug">
+
+	nav
+		a(href='/' use:$url)
+			h3 Home
+		
+		Nav({children})
+
+</template>
