@@ -5,4 +5,4 @@ const initialTheme = globalThis.localStorage && 'theme' in localStorage
 	: 'light'
 
 export const theme = localStorageStore('theme', initialTheme);
-export default theme;
+export default theme; 

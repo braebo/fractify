@@ -1,4 +1,4 @@
-import { get } from 'svelte/store'
+import { get, writable } from 'svelte/store'
 import themes from './themes'
 import theme from './index'
 
@@ -109,3 +109,5 @@ export const toggleTheme = () => {
 		applyTheme('light');
 	};
 };
+
+export const initComplete = writable(false)

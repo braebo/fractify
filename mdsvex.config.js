@@ -3,7 +3,7 @@ import github from 'remark-github'
 import slug from 'rehype-slug'
 import abbr from 'remark-abbr'
 
-const mdsvexConfig = {
+export default {
 	extensions: ['.svelte.md', '.md', '.svx'],
 	smartypants: {
 		dashes: 'oldschool'
@@ -12,7 +12,7 @@ const mdsvexConfig = {
 		[
 			github,
 			{
-				repository: 'https://github.com/fractal-hq/svelte-playground-kit.git'
+				repository: 'https://github.com/fractal-hq/fractify.git'
 			}
 		],
 		abbr
@@ -27,5 +27,3 @@ const mdsvexConfig = {
 		]
 	]
 }
-
-export default mdsvexConfig
