@@ -3,10 +3,6 @@ https://fractify.vercel.app
 
 #### My personal [Routify](https://routify.dev) starter template, powered by [stackmix](https://github.com/roxiness/stackmix)
 
-<center>
-	<h5 align=center> 🚧 &nbsp; <em>work in progress</em> 🚧  </h5>
-</center>
-
 ## Features
 
 - [Vite](http://vitejs.dev/)
