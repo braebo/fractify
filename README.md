@@ -1,5 +1,4 @@
 # Fractify Starter
-https://fractify.vercel.app
 
 #### My personal [Routify](https://routify.dev) starter template, powered by [stackmix](https://github.com/roxiness/stackmix)
 
