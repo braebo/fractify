@@ -1,7 +1,7 @@
 <script>
-	import { hoverState } from '$lib/components/Nav/hoverStore';
+	import { hoverState } from './hoverStore';
 	import { layout, url, page } from '@roxi/routify';
-	import * as Icons from '$lib/components/Nav/icons';
+	import * as Icons from './icons';
 	import { fade } from 'svelte/transition';
 
 	const handle_toggle = (e) => {
@@ -12,11 +12,11 @@
 	};
 </script>
 
-<!-- {#if $page.path == '/learn/index'} -->
+{#if $page.path == '/learn/index'}
 	<div class="section-container">
 		{#each $layout.children as category}
 			<span style="--color: {category.meta.color}">
-				<!-- {#if $hoverState.item == category.title.toUpperCase() && $hoverState.hovering} -->
+				{#if $hoverState.item == category.title.toUpperCase() && $hoverState.hovering}
 					<div
 						transition:fade
 						class="backdrop-container"
@@ -28,7 +28,7 @@
 											rgb(var(--color), .5) 150%
 				);"
 					/>
-				<!-- {/if} -->
+				{/if}
 				<div class="icon-container">
 					<div class="icon-wrapper">
 						<a use:$url href={category.path}>
@@ -43,7 +43,7 @@
 			</span>
 		{/each}
 	</div>
-<!-- {/if} -->
+{/if}
 
 <style>
 	.backdrop-container {

@@ -1,7 +1,6 @@
 <script>
-	import Themer from '$lib/components/Navbar/Themer/index.svelte'
-	import Bar from '$lib/components/Navbar/Bar.svelte'
-	import Lang from '$lib/components/Lang.svelte'
+	import Themer from '$lib/components/Nav/Themer/index.svelte'
+	import Nav from '$lib/components/Nav/index.svelte'
 
 	let closed = false;
 </script>
@@ -10,9 +9,8 @@
 
 	#app
 		Themer
-		aside(class:closed)
-			Lang
-			Bar
+		//- aside(class:closed)
+			Nav
 
 		section
 			main.container
@@ -34,10 +32,17 @@
 		padding-top: 64px;
 	}
 	aside {
-		padding: 16px;
-		/* box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); */
-		height: 100%;
+		box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 		position: fixed;
+		
+		height: 100%;
+		padding: 16px;
+		display: flex;
+		width: 100%;
+		max-width: 500px;
+		min-width: max-content;
+		
+		background: var(--light-a);
 	}
 	aside.closed {
 		transform: translateX(100%);

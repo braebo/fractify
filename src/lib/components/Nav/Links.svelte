@@ -3,7 +3,7 @@
 	export let items = $layout.children
 	export let maxDepth = Infinity
 	export let _depth = 0
-	export let expand = 'selected' // "selected", "all" or false
+	export let expand = 'selected' // 'selected', 'all' or false
 
 	_depth++
 
@@ -12,21 +12,20 @@
 	$: shouldExpand = (path) => (expand === 'selected' && $isActive(path)) || expand === 'all'
 </script>
 
+<template lang='pug'>
 
-<ul>
-	{#each items as { path, title, children, ...rest }}
-		<li data-nav-depth={_depth}>
+	ul
+		+each('items as { path, title, children, ...rest }')
 			
-			<a href={$url(path)} class={getClass(path)}>{title}</a>
+			li(data-nav-depth='{_depth}')
 
-			{#if items && _depth < maxDepth && shouldExpand(path)}
-				<svelte:self items={children} {maxDepth} {_depth} />
-			{/if}
-		
-		</li>
-	{/each}
-</ul>
+				a(href!='{$url(path)}' class!='{getClass(path)}') {title}
 
+				+if('items && _depth < maxDepth && shouldExpand(path)')
+
+					svelte:self(items='{children}' '{maxDepth}' '{_depth}')
+
+</template>
 
 <style>
 	.active {
@@ -34,14 +33,16 @@
 	}
 	ul {
 		margin-left: 0;
+		padding: 0;
 	}
 	li {
 		margin-left: 12px;
-	}
-	li {
 		list-style: none;
+		padding: 0;
 	}
 	a {
 		text-transform: capitalize;
+		font-size: 1.5rem;
+		font-family: var(--font-primary);
 	}
 </style>

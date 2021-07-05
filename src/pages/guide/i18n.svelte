@@ -1,5 +1,5 @@
 <script>
-	import { language } from '$lib/components/Lang.svelte'
+	import { language } from '$lib/components/Nav/Lang.svelte'
 	$: lang = $language.short
 </script>
 

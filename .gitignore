@@ -3,5 +3,5 @@
 /.routify
 /functions
 .DS_Store
-/build
+/dist
 .env
