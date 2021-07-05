@@ -1,3 +1,4 @@
+const postcssShort = require('postcss-short')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
@@ -6,6 +7,7 @@ const dev = mode === 'development'
 
 module.exports = {
 	plugins: [
+		postcssShort,
 		autoprefixer,
 		!dev &&
 			cssnano({

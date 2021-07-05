@@ -1,11 +1,6 @@
 # Fractify Starter
-https://fractify.vercel.app
 
 #### My personal [Routify](https://routify.dev) starter template, powered by [stackmix](https://github.com/roxiness/stackmix)
-
-<center>
-	<h5 align=center> 🚧 &nbsp; <em>work in progress</em> 🚧  </h5>
-</center>
 
 ## Features
 
@@ -13,10 +8,11 @@ https://fractify.vercel.app
 - [i18n](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 - [ESLint](https://eslint.org/)
 - [Vercel](https://vercel.com/)
-- [Prettier](https://prettier.io/)
 - [MDSvex](https://mdsvex.com/)
-- [Typescript](https://www.typescriptlang.org/)
+- [Prettier](https://prettier.io/)
 - [Dark Mode](https://blog.weekdone.com/why-you-should-switch-on-dark-mode/)
+- [Stylelint](https://stylelint.io/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Local Fonts](https://www.tunetheweb.com/blog/should-you-self-host-google-fonts/)
 - [AVA Testing](https://github.com/avajs/ava)
 - [PostCSS](https://postcss.org/)

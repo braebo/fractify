@@ -1,18 +1,22 @@
-import svelte from '@sveltejs/vite-plugin-svelte'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 import autoPreprocess from 'svelte-preprocess'
-import { appConfig } from './package.json'
+import { resolve, dirname } from 'path'
 import viteMainJs from 'vite-main-js'
 import { mdsvex } from 'mdsvex'
-import { resolve } from 'path'
 import slug from 'remark-slug'
-const { port } = appConfig
+
+import { fileURLToPath } from 'url';
+// @ts-ignore
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const production = process.env.NODE_ENV === 'production'
 
-module.exports = {
+export default {
 	server: {
-		port: port
+		port: 5000
 	},
+	publicDir: 'static',
 	build: {
 		cssCodeSplit: false
 	},

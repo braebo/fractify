@@ -1,6 +1,10 @@
 {
     "name": "Frackit",
     "short_name": "Frackit",
+	"theme_color": "#00d0ff",
+    "background_color": "#3d3d3d",
+	"display": "standalone",
+	"start_url": "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -12,8 +16,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "theme_color": "#00d0ff",
-    "background_color": "#3d3d3d",
-    "display": "standalone"
+    ]
 }

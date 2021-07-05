@@ -1,9 +1,9 @@
-const preprocess = require('svelte-preprocess');
+// @ts-ignore
+import * as postcss from './postcss.config.cjs';
+import preprocess from 'svelte-preprocess';
 
-module.exports = {
+export default {
     preprocess: [
-        preprocess({
-            postcss: require('./postcss.config.js'),
-        }),
+        preprocess({ postcss }),
     ],
 };
