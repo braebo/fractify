@@ -9,6 +9,7 @@ const setAsync = async (key: string, value: any): Promise<void> => {
 			: localStorage.setItem(key, value);
 	});
 }
+
 const getAsync = async (key: string): Promise<JSON> => {
 	return Promise.resolve().then(() => {
 		let value = localStorage.getItem(key);
